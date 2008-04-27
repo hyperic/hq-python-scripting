@@ -29,7 +29,6 @@ import org.python.core.*;
 import org.python.util.PythonInterpreter;
 
 import java.io.File;
-import java.io.InputStream;
 import java.util.Properties;
 
 import org.hyperic.hq.product.PluginException;
@@ -73,14 +72,6 @@ public class PythonLanguagePlugin
         if (!sys.path.__contains__(dir)) {
             sys.path.append(dir);
         }
-    }
-
-    public Class loadClass(ClassLoader loader,
-                           Properties properties,
-                           InputStream is)
-        throws PluginException {
-
-        throw new PluginException("NOTIMPL");
     }
 
     public Class loadClass(ClassLoader loader,
